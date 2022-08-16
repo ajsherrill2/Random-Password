@@ -22,9 +22,11 @@ function generatePassword() {
     specials: '!@#$%^&*()'
   };
 
+  //
   var combinedChars = "";
   var generatedPass = "";
 
+  //
   var passwordLength = window.prompt('How many characters would you like your password to contain?');
     if (passwordLength >= 8 && passwordLength <= 128) {
       window.confirm('Continue to characters types');
@@ -50,15 +52,31 @@ function generatePassword() {
   //
   var addNumericalChars = window.confirm('Click OK to confirm using numerical characters');  
     if (addNumericalChars) {
-      combinedChars += allCharacters.numbers
+      combinedChars += allCharacters.numbers;
     }
   
   //
   var addSpecialChars = window.confirm('Click OK to confirm using special characters');
     if (addSpecialChars) {
-      combinedChars += allCharacters.specials
+      combinedChars += allCharacters.specials;
     }    
-  
+
+    //
+    if (
+      !addLowercaseChars &&
+      !addUppercaseChars &&
+      !addNumericalChars &&
+      !addSpecialChars
+      ) {
+        window.alert('Please select atleast one type of characters for password');
+        return null;
+      }
+
+  //
+  for (let i = 0; i < passwordLength; i++) {
+    generatedPass += combinedChars[Math.floor(Math.random() * combinedChars.length)];
+  }
+  return generatedPass;
 }
 
 // Add event listener to generate button
