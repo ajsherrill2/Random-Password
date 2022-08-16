@@ -10,11 +10,11 @@ function writePassword() {
 
 }
 
-// My code
+// Random password generator function
 function generatePassword() {
   console.log('Clicked button');
 
-  //Password criteria
+  // Password criteria stored into key-values
   const allCharacters = {
     lowercase: 'abcdefghijklmnopqrstuvwxyz',
     uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -22,11 +22,12 @@ function generatePassword() {
     specials: '!@#$%^&*()'
   };
 
-  //
+  // combinedChars is empty but will gain strings based on users input
+  // generatedPass is the final product of the generatePassword() function
   var combinedChars = "";
   var generatedPass = "";
 
-  //
+  // This provides a intitial prompt asking for the users desired password length with <> conditions
   var passwordLength = window.prompt('How many characters would you like your password to contain?');
     if (passwordLength >= 8 && passwordLength <= 128) {
       window.confirm('Continue to characters types');
@@ -37,31 +38,31 @@ function generatePassword() {
       window.alert('please make sure your value is number');
     }
 
-  //
+  // This statement determines whether to add lowercase chars to the combined pool
   var addLowercaseChars = window.confirm('Click OK to confirm using lowercase characters');
     if (addLowercaseChars) {
       combinedChars += allCharacters.lowercase;  
     }
 
-  //
+  // This statement determines whether to add uppercase chars to the combined pool
   var addUppercaseChars = window.confirm('Click OK to confirm using uppercase characters');
     if (addUppercaseChars) {
       combinedChars += allCharacters.uppercase;
     }
   
-  //
+  // This statement determines whether to add numerical chars to the combined pool
   var addNumericalChars = window.confirm('Click OK to confirm using numerical characters');  
     if (addNumericalChars) {
       combinedChars += allCharacters.numbers;
     }
   
-  //
+  // This statement determines whether to add special chars to the combined pool
   var addSpecialChars = window.confirm('Click OK to confirm using special characters');
     if (addSpecialChars) {
       combinedChars += allCharacters.specials;
     }    
 
-    //
+    // If the user selects no for each char type then this message is displayed
     if (
       !addLowercaseChars &&
       !addUppercaseChars &&
@@ -72,11 +73,11 @@ function generatePassword() {
         return null;
       }
 
-  //
+  // For loop that loops through added char string with desired length to generate a random password 
   for (let i = 0; i < passwordLength; i++) {
     generatedPass += combinedChars[Math.floor(Math.random() * combinedChars.length)];
   }
-  return generatedPass;
+  return generatedPass; // Returns random password to textbox 
 }
 
 // Add event listener to generate button
