@@ -36,6 +36,7 @@ function generatePassword() {
       return null;
     } else {
       window.alert('please make sure your value is number');
+      return null;
     }
 
   // This statement determines whether to add lowercase chars to the combined pool
