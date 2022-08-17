@@ -12,7 +12,6 @@ function writePassword() {
 
 // Random password generator function
 function generatePassword() {
-  console.log('Clicked button');
 
   // Password criteria stored into key-values
   const allCharacters = {
@@ -30,7 +29,7 @@ function generatePassword() {
   // This provides a intitial prompt asking for the users desired password length with <> conditions
   var passwordLength = window.prompt('How many characters would you like your password to contain?');
     if (passwordLength >= 8 && passwordLength <= 128) {
-      window.confirm('Continue to characters types');
+      window.alert('Continue to characters types');
     } else if (passwordLength > 128 || passwordLength < 8) {
       window.alert('Please enter a number between 8 and 128');
       return null;
@@ -71,7 +70,7 @@ function generatePassword() {
       !addSpecialChars
       ) {
         window.alert('Please select atleast one type of characters for password');
-        return null;
+        return generatePassword();
       }
 
   // For loop that loops through added char string with desired length to generate a random password 
