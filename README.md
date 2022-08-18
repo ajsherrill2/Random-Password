@@ -16,7 +16,9 @@ In this project I was tasked with creating an application to a web page includin
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
 The steps towards installing this application to the web page iclude:
-
+first cloning to starter code into my own personal repository
+Next making sure I have all neccessary files in order for expected application to run according to its design (Html, CSS, Javascript)
+The Js file is where I am tasked to add a function so once I have cloned and commited my new code in my repository I can begin deducing where I need to focus my attention.
 
 ## Usage
 
@@ -27,6 +29,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ```md
     ![alt text](assets/images/screenshot.png)
     ```
+
+Your can find my the new live application at 
 
 ## Credits
 
