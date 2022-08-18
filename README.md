@@ -68,6 +68,8 @@ I collaberated with:
 
  Shelby Hernandez https://github.com/Shernandez927/new-generation
 
+ Gloriana https://github.com/ggggglo/Password_Generator_Cleanup
+
  Tutorials:
 
  Youtube https://www.youtube.com/watch?v=O-79Cb5s9U4&t=394s
