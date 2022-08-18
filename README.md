@@ -9,7 +9,6 @@ In this project I was tasked with creating an application to a web page includin
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license)
 
 ## Installation
 
