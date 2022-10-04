@@ -39,7 +39,7 @@ Once that is executed to loop return this new generatedPass string giving the us
 
 ## Usage
 
-You can find my the new live application at https://ajsherrill2.github.io/Random-Password/
+You can find the new live application at https://ajsherrill2.github.io/Random-Password/
 
 <img src=".\assets\images\screenshot1.png" width="70%">
 
